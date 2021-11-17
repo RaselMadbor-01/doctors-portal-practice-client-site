@@ -14,7 +14,7 @@ const SpecificeAppointments = ({date}) => {
     const[specificeAppointment,setSpecificeAppointment]=useState([]);
     useEffect(()=>{
       
-        fetch(`http://localhost:5000/appointment?email=${user.email}&date=${date}`,{
+        fetch(`https://whispering-sierra-38369.herokuapp.com/appointment?email=${user.email}&date=${date}`,{
             method:"GET",
             headers:{
               "authorization":`Bearer ${token}`

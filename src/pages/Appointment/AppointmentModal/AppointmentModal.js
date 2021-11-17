@@ -29,7 +29,7 @@ const AppointmentModal = ({ openBookng, handleBookingClose, booking,date,setBook
   const { name, time } = booking;
   const handleSubmit=(e)=>{
       const appointmentDetails={...bookingInfo,time,ServiceName:name,date:date.toLocaleDateString()};
-      fetch("http://localhost:5000/appointment",{
+      fetch("https://whispering-sierra-38369.herokuapp.com/appointment",{
         method:"POST",
         headers:{
           "content-type":"application/json"
