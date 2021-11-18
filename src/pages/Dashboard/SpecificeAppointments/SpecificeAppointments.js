@@ -7,6 +7,8 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import { Link } from 'react-router-dom';
+import { Button } from '@mui/material';
 
 
 const SpecificeAppointments = ({date}) => {
@@ -46,7 +48,9 @@ const SpecificeAppointments = ({date}) => {
                 {row.patentName}
               </TableCell>
               <TableCell align="center">{row.time}</TableCell>
-              <TableCell align="center">{row.fat}</TableCell>
+              <TableCell align="center">{
+                row.payment ? "Paid" :<Link to={`/dashboard/payment/${row._id}`}><Button>Pay</Button></Link>
+              }</TableCell>
             </TableRow>
           ))}
         </TableBody>

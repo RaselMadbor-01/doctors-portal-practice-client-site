@@ -7,6 +7,7 @@ import AddDoctors from "./pages/Dashboard/AddDoctors/AddDoctors";
 import Dashboard from "./pages/Dashboard/Dashboard/Dashboard";
 import DashboardHome from "./pages/Dashboard/DashboardHome/DashboardHome";
 import MakeAdmin from "./pages/Dashboard/MakeAdmin/MakeAdmin";
+import Payment from "./pages/Dashboard/Payment/Payment";
 import Home from "./pages/Home/Home/Home";
 import AdminRoute from "./pages/Login/AdminRoute/AdminRoute.";
 import Login from "./pages/Login/Login/Login";
@@ -25,6 +26,9 @@ function App() {
             <Route path="/register" element={<Register />} />
             <Route path="/dashboard" element={<Dashboard />}>
               <Route path="" element={<DashboardHome />} />
+              
+              <Route path="payment/:appointmentId" element={<Payment redirectTo="/:appointmentId"> </Payment>} />
+               
               <Route path="makeAdmin" element={<AdminRoute redirectTo="/">
                                                       <MakeAdmin />
                                                 </AdminRoute>  } />

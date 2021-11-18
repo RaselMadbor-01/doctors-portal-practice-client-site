@@ -19,6 +19,9 @@ const Booking = ({ booking,pickedDate,setBookingSuccess }) => {
       <Typography variant="caption" display="block" gutterBottom>
         {booking.space} SPACES AVAILABLE
       </Typography>
+      <Typography variant="caption" display="block" gutterBottom>
+        price :${booking.price}
+      </Typography>
       <Button variant="contained" onClick={handleBookingOpen} style={{backgroundColor:"#0ABAB6  "}}>BOOK APPOINTMENT</Button>
       </Paper>
     </Grid>

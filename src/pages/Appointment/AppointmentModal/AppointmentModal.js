@@ -26,9 +26,9 @@ const AppointmentModal = ({ openBookng, handleBookingClose, booking,date,setBook
   const{user}=useAuth();
   const initialValue={patentName:user.displayName,email:user.email,phone:""};
   const [bookingInfo,setBookingInfo]=useState(initialValue);
-  const { name, time } = booking;
+  const { name, time,price } = booking;
   const handleSubmit=(e)=>{
-      const appointmentDetails={...bookingInfo,time,ServiceName:name,date:date.toLocaleDateString()};
+      const appointmentDetails={...bookingInfo,time,price,ServiceName:name,date:date.toLocaleDateString()};
       fetch("https://whispering-sierra-38369.herokuapp.com/appointment",{
         method:"POST",
         headers:{
